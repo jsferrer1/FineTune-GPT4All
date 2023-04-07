@@ -1,0 +1,945 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 33%|████████████████████████████████████████████████████▋                                                                                                         | 125/375 [13:47<28:30,  6.84s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[31m│[39m in [92m<module>[39m:[94m1[39m                                                                                    [31m│[39m███████████████████████████████████████████████████████████████| 125/125 [02:40<00:00,  1.29s/it]
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /Users/jedi/project/upwork/FineTune-GPT4All/.env/lib/python3.9/site-packages/transformers/[1mtraine[22m [31m│
+[31m│[39m [1mr.py[22m:[94m1633[39m in [92mtrain[39m                                                                               [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   1630 │   │   inner_training_loop = find_executable_batch_size(                                 [31m│
+[31m│[39m   1631 │   │   │   [96mself[39m._inner_training_loop, [96mself[39m._train_batch_size, args.auto_find_batch_size  [31m│
+[31m│[39m   1632 │   │   )                                                                                 [31m│
+[31m│[39m [31m❱ [39m1633 │   │   [94mreturn[39m inner_training_loop(                                                       [31m│
+[31m│[39m   1634 │   │   │   args=args,                                                                    [31m│
+[31m│[39m   1635 │   │   │   resume_from_checkpoint=resume_from_checkpoint,                                [31m│
+[31m│[39m   1636 │   │   │   trial=trial,                                                                  [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /Users/jedi/project/upwork/FineTune-GPT4All/.env/lib/python3.9/site-packages/transformers/[1mtraine[22m [31m│
+[31m│[39m [1mr.py[22m:[94m1994[39m in [92m_inner_training_loop[39m                                                                [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   1991 │   │   │   │   [96mself[39m.control.should_training_stop = [94mTrue[39m                                  [31m│
+[31m│[39m   1992 │   │   │                                                                                 [31m│
+[31m│[39m   1993 │   │   │   [96mself[39m.control = [96mself[39m.callback_handler.on_epoch_end(args, [96mself[39m.state, [96mself[39m.con  [31m│
+[31m│[39m [31m❱ [39m1994 │   │   │   [96mself[39m._maybe_log_save_evaluate(tr_loss, model, trial, epoch, ignore_keys_for_  [31m│
+[31m│[39m   1995 │   │   │                                                                                 [31m│
+[31m│[39m   1996 │   │   │   [94mif[39m DebugOption.TPU_METRICS_DEBUG [95min[39m [96mself[39m.args.debug:                          [31m│
+[31m│[39m   1997 │   │   │   │   [94mif[39m is_torch_tpu_available():                                              [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /Users/jedi/project/upwork/FineTune-GPT4All/.env/lib/python3.9/site-packages/transformers/[1mtraine[22m [31m│
+[31m│[39m [1mr.py[22m:[94m2236[39m in [92m_maybe_log_save_evaluate[39m                                                            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   2233 │   │   │   │   │   │   metric_key_prefix=[33mf"eval_{[39meval_dataset_name[33m}"[39m,                    [31m│
+[31m│[39m   2234 │   │   │   │   │   )                                                                     [31m│
+[31m│[39m   2235 │   │   │   [94melse[39m:                                                                         [31m│
+[31m│[39m [31m❱ [39m2236 │   │   │   │   metrics = [96mself[39m.evaluate(ignore_keys=ignore_keys_for_eval)                 [31m│
+[31m│[39m   2237 │   │   │   [96mself[39m._report_to_hp_search(trial, [96mself[39m.state.global_step, metrics)             [31m│
+[31m│[39m   2238 │   │                                                                                     [31m│
+[31m│[39m   2239 │   │   [94mif[39m [96mself[39m.control.should_save:                                                      [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /Users/jedi/project/upwork/FineTune-GPT4All/.env/lib/python3.9/site-packages/transformers/[1mtraine[22m [31m│
+[31m│[39m [1mr.py[22m:[94m2932[39m in [92mevaluate[39m                                                                            [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   2929 │   │   start_time = time.time()                                                          [31m│
+[31m│[39m   2930 │   │                                                                                     [31m│
+[31m│[39m   2931 │   │   eval_loop = [96mself[39m.prediction_loop [94mif[39m [96mself[39m.args.use_legacy_prediction_loop [94melse[39m [96mse[39m  [31m│
+[31m│[39m [31m❱ [39m2932 │   │   output = eval_loop(                                                               [31m│
+[31m│[39m   2933 │   │   │   eval_dataloader,                                                              [31m│
+[31m│[39m   2934 │   │   │   description=[33m"Evaluation"[39m,                                                     [31m│
+[31m│[39m   2935 │   │   │   # No point gathering the predictions if there are no metrics, otherwise we d  [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /Users/jedi/project/upwork/FineTune-GPT4All/.env/lib/python3.9/site-packages/transformers/[1mtraine[22m [31m│
+[31m│[39m [1mr.py[22m:[94m3220[39m in [92mevaluation_loop[39m                                                                     [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   3217 │   │   │   │   │   EvalPrediction(predictions=all_preds, label_ids=all_labels, inputs=a  [31m│
+[31m│[39m   3218 │   │   │   │   )                                                                         [31m│
+[31m│[39m   3219 │   │   │   [94melse[39m:                                                                         [31m│
+[31m│[39m [31m❱ [39m3220 │   │   │   │   metrics = [96mself[39m.compute_metrics(EvalPrediction(predictions=all_preds, lab  [31m│
+[31m│[39m   3221 │   │   [94melse[39m:                                                                             [31m│
+[31m│[39m   3222 │   │   │   metrics = {}                                                                  [31m│
+[31m│[39m   3223                                                                                           [31m│
+[31m│[39m in [92mcompute_metrics[39m:[94m4[39m                                                                             [31m│
+[31m╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+[1mNameError: [22mname [32m'metric'[39m is not defined
+[31m╭─────────────────────────────── [39m[1mTraceback (most recent call last)[31m[22m ────────────────────────────────╮
+[31m│[39m in [92m<module>[39m:[94m4[39m                                                                                    [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /Users/jedi/Library/Python/3.9/lib/python/site-packages/evaluate/[1mloading.py[22m:[94m731[39m in [92mload[39m          [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   728 │   │   [33m`evaluate.EvaluationModule`[39m                                                        [31m│
+[31m│[39m   729 │   [33m"""[39m                                                                                    [31m│
+[31m│[39m   730 │   download_mode = DownloadMode(download_mode [95mor[39m DownloadMode.REUSE_DATASET_IF_EXISTS)    [31m│
+[31m│[39m [31m❱ [39m731 │   evaluation_module = evaluation_module_factory(                                         [31m│
+[31m│[39m   732 │   │   path, module_type=module_type, revision=revision, download_config=download_confi   [31m│
+[31m│[39m   733 │   )                                                                                      [31m│
+[31m│[39m   734 │   evaluation_cls = import_main_class(evaluation_module.module_path)                      [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /Users/jedi/Library/Python/3.9/lib/python/site-packages/evaluate/[1mloading.py[22m:[94m680[39m in               [31m│
+[31m│[39m [92mevaluation_module_factory[39m                                                                        [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   677 │   │   │   │   [94mexcept[39m [96mException[39m [94mas[39m e2:  # noqa: if it's not in the cache, then it doesn   [31m│
+[31m│[39m   678 │   │   │   │   │   [94mpass[39m                                                                   [31m│
+[31m│[39m   679 │   │   │   [94mif[39m [95mnot[39m [96misinstance[39m(e1, ([96mConnectionError[39m, [96mFileNotFoundError[39m)):                   [31m│
+[31m│[39m [31m❱ [39m680 │   │   │   │   [94mraise[39m e1 [94mfrom[39m [96mNone[39m                                                         [31m│
+[31m│[39m   681 │   │   │   [94mraise[39m [96mFileNotFoundError[39m(                                                       [31m│
+[31m│[39m   682 │   │   │   │   [33mf"Couldn't find a module script at {[39mrelative_to_absolute_path(combined_p   [31m│
+[31m│[39m   683 │   │   │   │   [33mf"Module '{[39mpath[33m}' doesn't exist on the Hugging Face Hub either."[39m           [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /Users/jedi/Library/Python/3.9/lib/python/site-packages/evaluate/[1mloading.py[22m:[94m633[39m in               [31m│
+[31m│[39m [92mevaluation_module_factory[39m                                                                        [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   630 │   │   │   │   [94mif[39m module_type [95mis[39m [94mNone[39m:                                                    [31m│
+[31m│[39m   631 │   │   │   │   │   [94mfor[39m current_type [95min[39m [[33m"metric"[39m, [33m"comparison"[39m, [33m"measurement"[39m]:           [31m│
+[31m│[39m   632 │   │   │   │   │   │   [94mtry[39m:                                                               [31m│
+[31m│[39m [31m❱ [39m633 │   │   │   │   │   │   │   [94mreturn[39m HubEvaluationModuleFactory(                             [31m│
+[31m│[39m   634 │   │   │   │   │   │   │   │   [33mf"evaluate-{[39mcurrent_type[33m}/{[39mpath[33m}"[39m,                         [31m│
+[31m│[39m   635 │   │   │   │   │   │   │   │   revision=revision,                                         [31m│
+[31m│[39m   636 │   │   │   │   │   │   │   │   download_config=download_config,                           [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /Users/jedi/Library/Python/3.9/lib/python/site-packages/evaluate/[1mloading.py[22m:[94m489[39m in [92mget_module[39m    [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   486 │   │   │   │   [94mraise[39m err                                                                  [31m│
+[31m│[39m   487 │   │                                                                                      [31m│
+[31m│[39m   488 │   │   imports = get_imports(local_path)                                                  [31m│
+[31m│[39m [31m❱ [39m489 │   │   local_imports = _download_additional_modules(                                      [31m│
+[31m│[39m   490 │   │   │   name=[96mself[39m.name,                                                                [31m│
+[31m│[39m   491 │   │   │   base_path=hf_hub_url(path=[96mself[39m.name, name=[33m""[39m, revision=revision),              [31m│
+[31m│[39m   492 │   │   │   imports=imports,                                                               [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m /Users/jedi/Library/Python/3.9/lib/python/site-packages/evaluate/[1mloading.py[22m:[94m265[39m in               [31m│
+[31m│[39m [92m_download_additional_modules[39m                                                                     [31m│
+[31m│[39m                                                                                                  [31m│
+[31m│[39m   262 │   │   [94mexcept[39m [96mImportError[39m:                                                                [31m│
+[31m│[39m   263 │   │   │   needs_to_be_installed.add((library_import_name, library_import_path))          [31m│
+[31m│[39m   264 │   [94mif[39m needs_to_be_installed:                                                              [31m│
+[31m│[39m [31m❱ [39m265 │   │   [94mraise[39m [96mImportError[39m(                                                                 [31m│
+[31m│[39m   266 │   │   │   [33mf"To be able to use {[39mname[33m}, you need to install the following dependencies"[39m    [31m│
+[31m│[39m   267 │   │   │   [33mf"{[39m[lib_name[90m [94mfor[90m [39mlib_name,[90m [39mlib_path[90m [95min[90m [39mneeds_to_be_installed][33m} using 'pip in[39m   [31m│
+[31m│[39m   268 │   │   │   [33mf"{' '[39m.join([lib_path[90m [94mfor[90m [39mlib_name,[90m [39mlib_path[90m [95min[90m [39mneeds_to_be_installed])[33m}' fo[39m   [31m│
+[31m╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+[1mImportError: [22mTo be able to use evaluate-metric/accuracy, you need to install the following dependencies[1m[[32m[22m'sklearn'[39m[1m][22m using [32m'pip install sklearn'[39m for instance'
+/Users/jedi/project/upwork/FineTune-GPT4All/.env/lib/python3.9/site-packages/transformers/optimization.py:391: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 33%|███████████████████████████████████████████████                                                                                              | 125/375 [13:02<25:35,  6.14s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 98%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋  | 123/125 [02:36<00:02,  1.28s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 67%|██████████████████████████████████████████████████████████████████████████████████████████████                                               | 250/375 [28:19<12:34,  6.03s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 99%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊ | 124/125 [02:38<00:01,  1.29s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 375/375 [44:19<00:00,  6.78s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 98%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍  | 123/125 [02:37<00:02,  1.29s/it]
+{'eval_loss': 1.1393216848373413, 'eval_accuracy': 0.57, 'eval_runtime': 161.1819, 'eval_samples_per_second': 6.204, 'eval_steps_per_second': 0.776, 'epoch': 3.0}
+{'train_runtime': 2820.4033, 'train_samples_per_second': 1.064, 'train_steps_per_second': 0.133, 'train_loss': 0.7118435872395833, 'epoch': 3.0}
+TrainOutput(global_step=375, training_loss=0.7118435872395833, metrics={'train_runtime': 2820.4033, 'train_samples_per_second': 1.064, 'train_steps_per_second': 0.133, 'train_loss': 0.7118435872395833, 'epoch': 3.0})

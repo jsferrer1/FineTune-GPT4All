@@ -1,0 +1,27 @@
+{
+    "os": "macOS-13.0-arm64-arm-64bit",
+    "python": "3.9.6",
+    "heartbeatAt": "2023-04-06T22:02:58.675474",
+    "startedAt": "2023-04-06T22:02:57.909519",
+    "docker": null,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "<python with no main file>",
+    "host": "macm2.local",
+    "username": "jedi",
+    "executable": "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "cpu_count": 12,
+    "cpu_count_logical": 12,
+    "disk": {
+        "total": 926.3517189025879,
+        "used": 11.966854095458984
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 16.0
+    }
+}
